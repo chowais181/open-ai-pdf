@@ -1,0 +1,26 @@
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+@media (max-width: 767px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex-1 {
+    margin-top: 1rem;
+  }
+
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .z-10 {
+    z-index: 10;
+  }
+
+  .z-20 {
+    z-index: 20;
+  }
+}

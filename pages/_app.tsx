@@ -1,0 +1,22 @@
+import '@/styles/base.css';
+import '../styles/global.css';
+import { CookiesProvider } from 'react-cookie';
+import type { AppProps } from 'next/app';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+});
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <CookiesProvider>
+      <main className={inter.variable}>
+        <Component {...pageProps} />
+      </main>
+    </CookiesProvider>
+  );
+}
+
+export default MyApp;

@@ -1,0 +1,520 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #000;
+}
+.source {
+  color: #000;
+}
+
+.header {
+  width: auto;
+}
+
+.header p {
+  text-align: center;
+}
+
+.cloudform {
+  position: relative;
+}
+
+.textarea {
+  position: relative;
+  resize: none;
+  font-size: 1.1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  width: 75vw;
+  border-radius: 0.5rem;
+  border: 1px solid #d9d9e3;
+  background: #ffffff;
+  color: #000;
+  outline: none;
+}
+
+.textarea:disabled {
+  opacity: 0.5;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #6b7280;
+  box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.5);
+}
+
+.textarea::placeholder {
+  color: #6b7280;
+}
+
+.generatebutton {
+  position: absolute;
+  top: 0.87rem;
+  right: 1rem;
+  color: rgb(165, 162, 162);
+  background: none;
+  padding: 0.3rem;
+  border: none;
+  display: flex;
+}
+
+.loadingwheel {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.25rem;
+}
+
+.svgicon {
+  transform: rotate(90deg);
+  width: 1.2em;
+  height: 1.2em;
+  fill: currentColor;
+}
+
+.generatebutton:hover {
+  background: #e4575726;
+  border-radius: 0.2rem;
+}
+
+.generatebutton:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+  background: none;
+}
+
+.messagelist {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  border-radius: 0.5rem;
+}
+
+.messagelistloading {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.usermessage {
+  background: #262b30;
+  padding: 1.5rem;
+  color: #fffcfc;
+}
+
+.usermessagewaiting {
+  padding: 1.5rem;
+  color: #d8d2d2;
+  background: linear-gradient(to left, #0708095a, #1a1c2061, #07080972);
+  background-size: 200% 200%;
+  background-position: -100% 0;
+  animation: loading-gradient 2s ease-in-out infinite;
+  animation-direction: alternate;
+  animation-name: loading-gradient;
+}
+
+@keyframes loading-gradient {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.apimessage {
+  background: #1f414e;
+  padding: 1.5rem;
+  color: #ffffff;
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.apimessage,
+.usermessage,
+.usermessagewaiting {
+  display: flex;
+}
+
+.markdownanswer {
+  line-height: 1.75;
+}
+
+.markdownanswer a:hover {
+  opacity: 0.8;
+}
+
+.markdownanswer a {
+  color: #b13a3a;
+  font-weight: 500;
+}
+
+.markdownanswer code {
+  color: #15cb19;
+  font-weight: 500;
+  white-space: pre-wrap !important;
+}
+
+.markdownanswer ol,
+.markdownanswer ul {
+  margin: 1rem;
+}
+
+.boticon,
+.usericon {
+  margin-right: 1rem;
+  border-radius: 0.1rem;
+  height: 100%;
+}
+
+.markdownanswer h1,
+.markdownanswer h2,
+.markdownanswer h3 {
+  font-size: inherit;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem 0;
+  flex-direction: column;
+}
+
+.cloud {
+  width: 75vw;
+  height: 65vh;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  border: 1px solid #d9d9e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointsnormal {
+  width: 90%;
+  height: 90%;
+}
+
+.pointsdim {
+  width: 90%;
+  height: 90%;
+  opacity: 0.25;
+}
+
+.footer {
+  color: #5f6368;
+  font-size: 0.8rem;
+  margin: 1.5rem;
+}
+
+.footer a {
+  font-weight: 500;
+  color: #7a7d81;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .main {
+    padding: 1rem;
+    max-height: 90vh;
+  }
+
+  .cloud {
+    width: 22rem;
+    height: 28rem;
+  }
+  .textarea {
+    width: 22rem;
+  }
+  .topnav {
+    border: 1px solid black;
+    align-items: center;
+    padding: 0.85rem 0.75rem 0.85rem 0.75rem;
+  }
+
+  .navlogo {
+    font-size: 1.25rem;
+    width: 20rem;
+  }
+
+  .markdownanswer code {
+    white-space: pre-wrap !important;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.customSidebarColor {
+  background-color: rgb(1, 49, 72);
+}
+.plusFileContainer {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  border: 1px dashed #000000;
+  z-index: 1;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+.iconAndTextContainer {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 1em;
+  width: 1em;
+  margin-right: 5px;
+  transition: transform 0.3s;
+}
+
+.text {
+  vertical-align: middle;
+  transition: color 0.3s;
+}
+
+.link:hover .icon {
+  color: rgb(81, 81, 130);
+  transform: rotate(90deg);
+}
+
+.link:hover .text {
+  color: rgb(81, 81, 130);
+}
+
+.sidebarOverflow {
+  overflow-y: auto;
+  max-height: calc(100vh - 240px); /* Adjust the max-height as needed */
+}
+
+.userContainer {
+  position: relative; /* Change to relative position */
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  margin-top: auto; /* Change margin-top to auto */
+  padding: 1rem;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.userIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.userEmail {
+  display: inline-block;
+  max-width: 150px; /* Adjust the maximum width as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative; /* Add position relative to the dropdown container */
+}
+
+.dropdownIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  bottom: 100%; /* Change top to bottom */
+  right: 0;
+  z-index: 1;
+  min-width: 160px;
+  padding: 0.5rem 0;
+  background-color: #000; /* Change background color to black */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  color: #fff; /* Change text color to white */
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff; /* Change text color to white */
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdownItem:hover {
+  background-color: #f5f5f5;
+  color: #000; /* Change text color on hover to black */
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.fileLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.fileName {
+  display: inline-block;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 0.5rem;
+}
+
+.selectionBtns {
+  display: flex; /* Display the buttons in a flex container */
+  align-items: center;
+}
+
+.clearSelectionButton {
+  padding: 5px;
+  display: block;
+  margin-bottom: 1rem;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1rem;
+  background-color: rgb(27, 39, 46);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deleteFilesButton {
+  padding: 5px;
+  display: flex; /* Display the button and the icon in a flex container */
+  align-items: center; /* Align the items vertically in the center */
+  color: #fff;
+  font-size: 1rem;
+  background-color: rgb(27, 39, 46);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.deleteFilesButton svg {
+  margin-left: 5px; /* Add margin between the text and the icon */
+}
+
+.deleteFilesButton:hover {
+  background-color: rgb(45, 84, 106);
+}
+
+.deleteFileSvg {
+  overflow: hidden;
+  margin-left: auto;
+}
+.deleteFileSvg:hover {
+  color: red;
+}
+
+.clearSelectionButton:hover {
+  background-color: rgb(45, 84, 106);
+}
+.divider {
+  margin-top: 5%;
+  margin-bottom: 10px;
+  width: 100%;
+  color: #000;
+  font-size: 0.8em;
+  font-weight: bold;
+  border: none;
+  height: 2px;
+  background-color: #000;
+}
+
+.sideBarContentHeight {
+  height: 30em;
+}
+
+.recentChat {
+  margin: 2px;
+  background-color: rgb(27, 39, 46);
+  color: white;
+  border: 1px solid rgb(49, 86, 110);
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.recentChat:hover {
+  background-color: rgb(45, 84, 106);
+}
+
+/* Override root button styles within the Accordion */
+.Accordion button {
+  /* Add your custom styles here */
+  border: none;
+}
+
+.Accordion .accordionItem {
+  border: 1px solid #1e1b1b;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  /* Add your custom styles for the accordion items here */
+}
+
+.Accordion .accordionTrigger {
+  /* background-color: #f2f2f2; */
+  padding: 10px;
+  /* Add your custom styles for the accordion triggers here */
+}
+
+.Accordion .accordionItem:hover {
+  background-color: #d6d6d6;
+}

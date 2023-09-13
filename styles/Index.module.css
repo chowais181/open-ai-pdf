@@ -1,0 +1,93 @@
+.heading {
+  margin-top: 20px;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.authLinks {
+  display: inline-flex;
+  align-items: center;
+}
+
+.centerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.linkContainerStyles {
+  display: inline-block;
+  background-color: #232817;
+  font-size: 1.1em;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+.linkContainerStyles:hover {
+  background-color: #1f282c;
+}
+
+.authPages {
+  margin-top: 50px;
+}
+.heading1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem 0;
+  flex-direction: column;
+}
+
+.dropContainer {
+  max-width: 800px; /* Set your desired maximum width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .dropContainer {
+    padding-left: 20px; /* Set your desired left margin for smaller screens */
+    padding-right: 20px; /* Set your desired right margin for smaller screens */
+  }
+}
+
+.textColor {
+  color: white;
+}
+
+.uploadFilebtn {
+  padding: 10px;
+}
+
+.uploadIcon {
+  color: blue;
+}
+
+.settingLabel {
+  display: flex;
+  margin-left: 25%;
+}
+.settingTextArea {
+  color: #1f282c;
+  padding: 1%;
+  width: 50%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.resetSetting {
+  margin-left: 10px;
+  padding: 10px;
+}
